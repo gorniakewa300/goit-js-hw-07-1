@@ -7,7 +7,7 @@ const gallery = {
 // ------------creating tags---------
 
 const arrayImgTag = galleryItems.map ( ({preview, original, description}) => {
-  return `<li class="gallery__item">
+  return `<div class="gallery__item">
             <a class="gallery__link" href="${original}">
               <img
                 class="gallery__image"
@@ -16,7 +16,7 @@ const arrayImgTag = galleryItems.map ( ({preview, original, description}) => {
                 alt="${description}"
               />
             </a>
-          </li>`
+          </div>`
 });
 
 gallery.container.insertAdjacentHTML("beforeend", arrayImgTag.join(''));

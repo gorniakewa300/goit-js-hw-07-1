@@ -5,6 +5,7 @@ const gallery = {
 };
 
 // --------------creating tags------------
+
 const arrayImgTag = galleryItems.map ( ({preview, original, description}) => {
   return `<li class="gallery__item">
             <a class="gallery__link" href="${original}">
@@ -16,7 +17,7 @@ const arrayImgTag = galleryItems.map ( ({preview, original, description}) => {
 gallery.container.insertAdjacentHTML("beforeend", arrayImgTag.join(''));
 
 
-// -------------connecting a lightbox from the SimpleLightbox library-------
+// -----connecting a lightbox from the SimpleLightbox library-------
 
 let galleryContainer = new SimpleLightbox('.gallery a', {
   close: false, 
